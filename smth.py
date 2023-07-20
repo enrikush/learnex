@@ -3,7 +3,6 @@ import json
 import os
 
 
-
 def convert_pdf_to_txt(pdf_file_path):
     with open(pdf_file_path, 'rb') as pdf_file:
         pdf_reader = PyPDF2.PdfReader(pdf_file)

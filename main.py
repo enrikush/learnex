@@ -1,3 +1,5 @@
+
+
 import random
 import json
 from colorama import init, Fore, Style
@@ -6,7 +8,10 @@ init(autoreset=True)
 def load_questions():
     with open("questions.json", "r") as json_file:
         data = json.load(json_file)
+    print(data)  # Add this line to see the contents of the data dictionary
     return data["questions"]
+
+
 
 def select_random_question(questions):
     return random.choice(questions)
