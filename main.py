@@ -1,5 +1,3 @@
-
-
 import random
 import json
 from colorama import init, Fore, Style
