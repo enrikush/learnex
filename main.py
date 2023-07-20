@@ -8,11 +8,8 @@ init(autoreset=True)
 def load_questions():
     with open("questions.json", "r") as json_file:
         data = json.load(json_file)
-    print(data)  # Add this line to see the contents of the data dictionary
+    # print(data) : Add this line to see the contents of the data dictionary
     return data["questions"]
-
-
-
 def select_random_question(questions):
     return random.choice(questions)
 
@@ -24,7 +21,6 @@ def animate_question(question):
         for font_size in font_sizes:
             formatted_question = f"{font_size}{color}{question['question']}{Style.RESET_ALL}"
             print(formatted_question)
-            input("Press Enter for the next animation...")
 
 def get_user_answer():
     return input("Your answer: ")
@@ -41,4 +37,3 @@ if __name__ == "__main__":
     animate_question(selected_question)
     user_answer = get_user_answer()
     check_answer(selected_question, user_answer)
-
